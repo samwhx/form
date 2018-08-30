@@ -7,7 +7,7 @@
  </mat-toolbar>
 
 
-      <!-- <app-task-entry (onAddItem) = "itemAdded($event)"></app-task-entry> -->
-<app-task-entry></app-task-entry>
+      <app-task-entry (onAddItem) = "itemAdded($event)"></app-task-entry>
+<!-- <app-task-entry></app-task-entry> -->
 
-      <app-task-list></app-task-list>
+      <app-task-list [list]="taskList" ></app-task-list>

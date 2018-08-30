@@ -1,17 +1,29 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" >Task List
+
+    <mat-icon>list</mat-icon>
+
+</mat-toolbar>
+
 <mat-card class="list">
   <mat-card-content>
-    <!-- <ul>
-      <li ngFor ="let i of list; let n = index;"
-          [ngClass] = "shaded: ( i % 2)"
-          {{i}}>
+    <ol *ngFor ="let i of list; let n = index;">
+      <li>
+        Description:
+          {{i.description}}
+          <br>
+          Priority:
+          {{i.priority}}
+          <br>
+          Date Due:
+          {{i.date._i}}
       </li>
-    </ul>
+    </ol>
     <div *ngIf="list.length <= 0">
       Your list is empty
     </div>
     <div *ngIf="list.length > 0">
       Your list has {{list.length}} items(s)
-    </div> -->
-    
+    </div>
+
   </mat-card-content>
 </mat-card>

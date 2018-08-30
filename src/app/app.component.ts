@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'form';
 
+  taskList:string[] = [];
+
+  itemAdded(item:string) {
+    console.log('>>>> new item: ', item);
+    this.taskList.push(item);
+  }
   // addItem(item) {
   //   console.log('items: ', item)
   // }
