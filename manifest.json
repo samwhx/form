@@ -3,7 +3,7 @@
   "short_name": "Form",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "display": "fullscreen",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/form",
   "icons": [
