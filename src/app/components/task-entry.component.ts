@@ -1,6 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-task-entry',
@@ -9,8 +8,8 @@ import { EventEmitter } from 'events';
 })
 export class TaskEntryComponent implements OnInit {
 
-  // @Output()
-  // onAddItem = new EventEmitter<number>();
+  @Output()
+  onAddItem = new EventEmitter<string[]>();
 
   constructor() { }
 
@@ -19,7 +18,7 @@ export class TaskEntryComponent implements OnInit {
 
   addItem (form:NgForm) {
     console.log ('form: ', form.value);
-    // this.onAddItem.next(form.value)
+    this.onAddItem.next(form.value);
     form.reset();
   }
 
