@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'form';
+
+  // addItem(item) {
+  //   console.log('items: ', item)
+  // }
 }
