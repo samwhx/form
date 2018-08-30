@@ -9,6 +9,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatNativeDateModule	} from '@angular/material';
+import {MatMomentDateModule	} from '@angular/material-moment-adapter';
+
+
+import {FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -21,7 +25,9 @@ const MODULES = [
   MatDatepickerModule,
   MatButtonModule,
   MatIconModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  FlexLayoutModule,
+  MatMomentDateModule
 ]
 
 @NgModule({

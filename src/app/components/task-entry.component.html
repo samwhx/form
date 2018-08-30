@@ -1,32 +1,35 @@
-<mat-card>
+<mat-card class="entry">
 
+<mat-card-content>
+<form #entry="ngForm" (ngSubmit)="addItem(entry)" >
 
-  <mat-card-content>
-<form action="">
-
+    <div fxLayout="column row">
 Description:
   <mat-form-field>
-    <input matInput name= "taskname" placeholder="Please enter the task" ngModel>
+    <input matInput name="description"  placeholder= "Please enter the task" ngModel required>
   </mat-form-field>
 <br>
-  Priority:
-  <mat-radio-group>
-      <mat-radio-button value="1">High</mat-radio-button>
-      <mat-radio-button value="2">Medium</mat-radio-button>
-      <mat-radio-button value="3">Low</mat-radio-button>
+Priority:
+  <mat-radio-group ngModel name="priority" fxLayout="column" fxLayoutGap="1vh" required>
+      <mat-radio-button value="high">High</mat-radio-button>
+      <mat-radio-button value="medium">Medium</mat-radio-button>
+      <mat-radio-button value="low">Low</mat-radio-button>
     </mat-radio-group>
 <br>
-Due:
-<mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+Due Date:
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="date" ngModel required>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
   <br>
+</div>
+<div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="1vw">
+  <button type="reset" mat-button mat-raised-button color="accent" ><mat-icon>refresh</mat-icon> Reset</button>
+  <button type="submit" mat-button mat-raised-button color="primary" [disabled]="entry.invalid" ><mat-icon>note_add</mat-icon> Add</button>
 
-  <button type="submit" mat-button mat-raised-button color="accent"><mat-icon>add_circle_outline</mat-icon> Add</button>
-
+</div>
 </form>
 
 </mat-card-content>

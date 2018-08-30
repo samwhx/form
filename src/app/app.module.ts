@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './materialize.module';
 import { TaskEntryComponent } from './components/task-entry.component';
+import { TaskListComponent } from './components/task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskEntryComponent
+    TaskEntryComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
